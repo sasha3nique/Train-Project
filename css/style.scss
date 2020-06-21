@@ -1,5 +1,191 @@
+$placeholder-color: #edf2f6;
+$accent: #ffe600;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
+
+.h1 {
+    color: black;
+    text-align: left;
+    width: 100%;
+    font-size: 60px;
+    margin-bottom: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
+}
+
+.h2 {
+    color: black;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 80%; 
+    margin: 35px auto 0 auto;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 150px;
+    .nav__links {
+        display: flex;
+        align-items: center;
+    }
+    .link + .link {
+        margin-left: 80px;
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: inherit;
+        transition: all 0.35s ease-in-out;
+        border-bottom: 2px solid white;
+        &:hover {
+            border-bottom: 2px solid black;
+        }
+    }
+}
+
+.header {
+    margin-bottom: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .header-img {
+        max-width: 50%;
+        min-width: 570px;
+        height: 540px;
+        background-color: $placeholder-color;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .header__main {
+        max-width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        .button__send {
+            background-color: $accent;
+            position: relative;
+            border: none;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: 0.5s all ease;
+            &:hover, &:focus {
+                transform:  translate(0%, -10px);
+                box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.75);
+            }
+        }
+    }
+}
+
+// мобилки
+@media screen and (max-width: 576px) {
+    .h1 {
+        text-align: center;
+        font-size: 36px ;
+        margin-bottom: 25px;
+    }
+    .h2 {
+        color: black;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    .container {
+        width: 100% !important; 
+    }
+    .nav:after {
+        content: '';
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 100px;
+        margin: 50px 0;
+    }
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        font-size: 20px;
+        margin-bottom: 0px;
+        .nav__links {
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+        }
+        .link {
+            margin: 0 !important;
+            padding-bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .header {
+        margin-bottom: 50px;
+        width: 90%;
+        margin: 0  auto;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        
+        
+        .header-img {
+            min-width: 330px !important;
+            max-width: 330px !important;
+            min-height: 330px !important;
+            max-height: 330px !important;
+        }
+        .header__main {
+            max-width: 90% !important;
+            width: 500px;
+            min-width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .button__send {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+
+// айпад
+@media screen and (max-width: 1100px) {
+    .h1 {
+        font-size: 40px;
+    }
+    .header-img {
+        min-width: 360px !important;
+        max-width: 50% !important;
+        max-height: 330px !important;
+        min-height: 360px !important;
+    }
+}
+
+
