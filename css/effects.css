@@ -1,0 +1,11 @@
+.h1-ef {
+  text-shadow: 5px 5px 0px #ffe600;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.h1-ef:hover {
+  color: #ffe600;
+  text-shadow: 5px 5px 0px black;
+}
+/*# sourceMappingURL=effects.css.map */

@@ -1,0 +1,14 @@
+$placeholder-color: #edf2f6;
+$accent: #ffe600;
+$gray: #f1f1f1;
+$dark: #1e1e1e;
+
+.h1-ef {
+    text-shadow: 5px 5px 0px $accent;
+    transition: 0.5s all;
+    &:hover {
+        color: $accent;
+        text-shadow: 5px 5px 0px black;
+    }  
+
+}
