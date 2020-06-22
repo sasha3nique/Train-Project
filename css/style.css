@@ -19,7 +19,7 @@
 }
 
 .h1:after {
-  content: '.';
+  content: '';
 }
 
 .h2 {
@@ -31,6 +31,10 @@
 
 img {
   border: 4px solid black;
+}
+
+.logo img {
+  border: none;
 }
 
 .container {
