@@ -29,6 +29,10 @@
   margin-bottom: 50px;
 }
 
+img {
+  border: 4px solid black;
+}
+
 .container {
   width: 80%;
   margin: 35px auto 0 auto;
@@ -76,7 +80,7 @@
   margin-bottom: 25px;
   background-color: #ffe600;
   position: relative;
-  border: 4px solid #ffe600;
+  border: 4px solid black;
   padding: 20px;
   font-size: 16px;
   font-weight: 900;
@@ -90,7 +94,7 @@
           transform: translate(0%, -10px);
   -webkit-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.75);
-  border: 4px solid black;
+  border: 4px solid #ffe600;
 }
 
 .btn__showme {
