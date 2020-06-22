@@ -12,11 +12,15 @@ $accent: #ffe600;
     color: black;
     text-align: left;
     width: 100%;
-    font-size: 60px;
+    font-size: 58px;
     margin-bottom: 50px;
     font-weight: 900;
     text-transform: uppercase;
     text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
+    font-family: 'Lato', sans-serif;
+    &:after {
+        content:'.';
+    }
 }
 
 .h2 {
@@ -55,7 +59,6 @@ $accent: #ffe600;
         }
     }
 }
-
 .header {
     margin-bottom: 150px;
     width: 100%;
@@ -99,12 +102,112 @@ $accent: #ffe600;
         }
     }
 }
+section {
+    margin-bottom: 150px;
+    margin: 0  auto;
+    width: 90%;
+}
+.portfolio__filtermenu {
+    margin: 70px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    .filtermenu__buttons {
+        width: 100%;
+        display: flex;
+        .filtermenu-button {
+            width: 600px;
+            display: flex ;
+            justify-content: space-around; 
+            .active {
+                background: $accent;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                text-transform: uppercase;
+                padding: 10px 20px;
+                border: 2px solid white;
+                transition: 0.3s all ease-in-out;
+                &:hover {
+                    border: 2px solid $accent;
+                }
+            }
+        }
+    }
+    .filtermenu__filter {
+        display: flex;
+        justify-items: center;
+        width: 200px;
+        i {
+            margin-left: 10px;
+            line-height: 20px;
+        }
+    }
+}
+.grid {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: minmax(1fr, 1fr) minmax(1fr, 1fr) minmax(1fr, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1px 1px;
+    grid-template-areas: ". . ." ". . ." ;
+    grid-gap: 30px;
+    .grid__item {
+        max-width: 330px;
+        width: 100%;
+        cursor: pointer;
+        position: relative;
+        img {
+            max-width: 330px;
+            width: 100%;
+            height: 100%;
+        }
+        .item__titlescreen {
+            background: rgba(255, 230, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            color: white;
+            top:0;
+            max-width: 330px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.5s ease;
+            &:hover {
+                opacity: 1;
+            }
+            .h1 {
+                color: black;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 30px;
+                &:after {
+                    content: '';
+                }
+            }
+            .h2 {
+                color: black;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+    }
+}
 
 // мобилки
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 740px) {
     .h1 {
         text-align: center;
-        font-size: 36px ;
+        font-size: 34px !important;
         margin-bottom: 25px;
     }
     .h2 {
@@ -145,9 +248,9 @@ $accent: #ffe600;
         }
     }
     .header {
+        margin: 0  auto;
         margin-bottom: 50px;
         width: 90%;
-        margin: 0  auto;
         flex-direction: column;
         justify-content: center;
         justify-items: center;
@@ -172,6 +275,40 @@ $accent: #ffe600;
             }
         }
     }
+    .portfolio__filtermenu {
+        margin: 25px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        font-size: 12px;
+        .filtermenu__buttons {
+            .filtermenu-button {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .active {
+                    background: $accent;
+                }
+                a {
+                    padding: 5px 10px;
+                }
+            }
+            margin-bottom: 20px;
+        }
+    }
+    section {
+        margin-bottom: 50px;
+        margin: 0  auto;
+        width: 90%;
+    }
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 
@@ -185,6 +322,28 @@ $accent: #ffe600;
         max-width: 50% !important;
         max-height: 330px !important;
         min-height: 360px !important;
+    }
+    .portfolio__filtermenu {
+        margin: 45px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        .filtermenu__buttons {
+            .filtermenu-button {
+                font-size: 14px;
+                .active {
+                    background: $accent;
+                }
+                a {
+                    padding: 5px 10px;
+                }
+            }
+            margin-bottom: 20px;
+        }
+        .filtermenu__filter {
+            font-size: 14px;
+        }
     }
 }
 
